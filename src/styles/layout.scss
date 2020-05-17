@@ -1,0 +1,168 @@
+$background: #fbfbfb;
+$blue: #042d5b;
+$red: #ff7777;
+
+html {
+    background-color: $background;
+}
+body {
+    box-sizing: border-box;
+    color: $blue;
+    max-width: 635px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+    * {
+        font-family: 'Libre Franklin', sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+header {
+    background: $background;
+    border-bottom: 2px solid $red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 64px;
+    a {
+        color: $blue;
+        box-shadow: none;
+        &:hover {
+            color: $red;
+        }
+    }
+}
+.site-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 6px 0;
+}
+.page-title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 6px 0;
+}
+.bio-quote {
+    margin: 16px 0;
+    font-size: 20px;
+    line-height: 24.4px;
+    font-weight: bold;
+    .red {
+        color: $red;
+    }
+}
+.section-title {
+    border-bottom: 2px solid $red;
+    color: $red;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    padding: 6px 0;
+    text-transform: uppercase;
+}
+.home-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-column-gap: 24px;
+}
+.post-header h3 {
+    color: $blue;
+    font-size: 20px;
+    line-height: 24.4px;
+    font-weight: 600;
+    margin: 12px 0 6px;
+    .red {
+        color: $red;
+        display: block;
+    }
+    a {
+        color: $blue;
+        box-shadow: inset 0 -1px 0 currentColor !important;
+        &:hover {
+            color: $red;
+        }
+    }
+}
+.post-header small {
+    color: $red;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 4px 0 6px;
+    display: block;
+}
+.home-article p {
+    font-size: 14px;
+    line-height: 1.55;
+}
+footer {
+    border-top: 2px solid $red;
+    margin-top: 24px;
+    padding: 6px 0;
+    font-size: 13px;
+    a {
+        color: $red;
+    }
+}
+.post-title {
+    font-weight: 600;
+}
+.post-date {
+    color: $red
+}
+h2 {
+    font-size: 28px;
+    line-height: 35px;
+    margin: 8px 0 6px;
+}
+h3 {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 6px 0 4px;
+}
+h4 {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 4px 0 4px;
+}
+ul, ol {
+    margin-left: 1.5em;
+    list-style: none;
+    counter-reset: li;
+}
+ul li {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    &::before {
+        color: $red;
+        content: "→";
+        padding-right: 12px;
+        position: absolute;
+    }
+}
+ol li {
+    counter-increment: li;
+    &::before {
+        color: $red;
+        content: counter(li);
+        margin-left: -1.25em;
+        padding-right: 0.5em;
+    }
+}
+a {
+    color: $red;
+}
+hr {
+    background-color: $red;
+    margin-bottom: 8px;
+}
+.post-navigation {
+    font-size: 14px;
+    font-weight: 500;
+    a {
+        color: $blue;
+        &:hover {
+            color: $red;
+        }
+    }
+}
